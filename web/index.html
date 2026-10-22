@@ -32,7 +32,7 @@
         email: 'contato@meridiano.com.br'
       }
     }, {
-          id: 2,
+      id: 2,
       amount: '3.500,00',
       status: 'pendente',
       issueDate: '15/10/2026',
@@ -43,7 +43,7 @@
         email: 'grafica@novavida.com.br'
       }
     }, {
-          id: 3,
+      id: 3,
       amount: '750,00',
       status: 'pendente',
       issueDate: '16/10/2026',
@@ -55,7 +55,17 @@
       }
     }];
 
-    const Title = () => <h1>Faturas</h1>
+    const Title = (props) => <h1>Faturas</h1>
+
+    const InvoiceRow = (props) => {
+      return <tr>
+        <td>{props.object.customer.name}</td>
+        <td>{props.object.amount}</td>
+        <td>{props.object.issueDate}</td>
+        <td>{props.object.dueDate}</td>
+        <td>{props.object.status}</td>
+      </tr>;
+    }
 
     const InvoiceTable = () => {
       return <>
@@ -70,13 +80,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Construtora Meridiano</td>
-              <td>R$ 1.250,00</td>
-              <td>10/10/2026</td>
-              <td>16/11/2026</td>
-              <td>Pendente</td>
-            </tr>
+          {invoices.map((invoice) => {
+            return <InvoiceRow key={invoice.id} object={invoice} />
+
+          })}
           </tbody>
         </table>
       </>
@@ -84,7 +91,7 @@
 
     const App = () => {
       return <>
-        <Title />
+        <Title text="Aqui contem um titulo." />
         <InvoiceTable />
       </>;
     }
