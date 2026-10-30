@@ -1,5 +1,6 @@
 import InvoiceTable from './InvoiceTable.tsx';
 import { Invoice } from './invoiceType.ts';
+
   const invoices: Invoice[]  = [{
     id: 1,
     amount: 520354,
@@ -7,7 +8,7 @@ import { Invoice } from './invoiceType.ts';
     issueDate: '2026-09-10',
     dueDate: '2026-10-15',
     customer: {
-      id:5,
+      id:9,
         name: 'Contrutora Meridiano',
         email: 'comercial@meridiano.com.br'
     }
@@ -18,7 +19,7 @@ import { Invoice } from './invoiceType.ts';
     issueDate: '2026-10-01',
     dueDate: '2026-10-31',
     customer: {
-       id: 22,
+       id: 50,
         name: 'Gráfica Nova Vida',
         email: 'grafica@novavida.com.br'
     }
@@ -29,7 +30,7 @@ import { Invoice } from './invoiceType.ts';
     issueDate: '2026-10-12',
     dueDate: '2026-11-17',
     customer: {
-      id:33,
+      id:8,
         name: 'Tendi Tudo',
         email: 'contato@tenditudo.com.br'
     }
@@ -37,6 +38,7 @@ import { Invoice } from './invoiceType.ts';
    
 export default function App() {
   return <>
-  <InvoiceTable datas={invoices}/>
+  <h1>Corcoite</h1>
+  <InvoiceTable datas={invoices} />
   </>;
 }
