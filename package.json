@@ -1,11 +1,12 @@
 {
-  "dependencies": {
-    "express": "^5.2.1",
-    "prisma": "^8.0.0-rc.22",
-    "zod": "^4.6.5"
+  "name": "corcoiote",
+  "author": "Ronald Fernandes",
+  "scripts": {
+    "check:web": "biome check ./web",
+    "fix:web": "biome check --write ./web"
   },
+
   "devDependencies": {
-    "@types/express": "^5.0.6",
-    "@types/node": "^26.6.4"
+    "@biomejs/biome": "^2.6.5"
   }
 }
